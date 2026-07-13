@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PkSport | Sports Equipment Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Performance gear for every match</p>
+          <h1>PkSport</h1>
+        </div>
+        <div class="topbar-actions">
+          <button class="checkout-icon" type="button" id="checkoutToggle" title="View payment options">
+            <span>💳</span>
+          </button>
+          <button class="cart-button" type="button" id="cartToggle">
+            <span>🛒</span>
+            <span class="cart-badge" id="cartBadge">0</span>
+          </button>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero-card">
+          <div class="hero-copy">
+            <p class="eyebrow">New season collection</p>
+            <h2>Train bold. Play fast. Elevate every move.</h2>
+            <p>
+              Discover premium shoes, socks, eyewear, and bags designed to keep up with your active lifestyle.
+            </p>
+            <a class="hero-link" href="#products">Shop now</a>
+          </div>
+          <div class="hero-highlight">
+            <div class="hero-badge">Free express delivery</div>
+            <div class="hero-stats">
+              <div>
+                <strong>4</strong>
+                <span>Categories</span>
+              </div>
+              <div>
+                <strong>12</strong>
+                <span>Top products</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="categories-section">
+          <div class="section-title">
+            <p class="eyebrow">Explore by category</p>
+            <h3>Built for every sport and every style</h3>
+          </div>
+          <div id="categoryGrid" class="categories-grid">
+            <article class="category-card active" data-category="All">
+              <span>⭐</span>
+              <h4>All</h4>
+              <p>See every product in the store.</p>
+            </article>
+            <article class="category-card" data-category="Shoes">
+              <span>👟</span>
+              <h4>Shoes</h4>
+              <p>Lightweight cushioning and stylish support.</p>
+            </article>
+            <article class="category-card" data-category="Sports Socks">
+              <span>🧦</span>
+              <h4>Sports Socks</h4>
+              <p>Breathable comfort for long training days.</p>
+            </article>
+            <article class="category-card" data-category="Sports Eyewear">
+              <span>🥽</span>
+              <h4>Eyewear</h4>
+              <p>Durable lenses and sharp vision on the move.</p>
+            </article>
+            <article class="category-card" data-category="Sports Bags">
+              <span>🎒</span>
+              <h4>Sports Bags</h4>
+              <p>Organized storage for your essentials.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="products" class="products-section">
+          <div class="section-title">
+            <p class="eyebrow">Featured products</p>
+            <h3>Pick your perfect gear</h3>
+          </div>
+          <div id="productsGrid" class="products-grid"></div>
+        </section>
+      </main>
+
+      <aside class="cart-panel" id="cartPanel">
+        <div class="cart-header">
+          <h3>Your cart</h3>
+          <button type="button" id="closeCart">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="checkout-box">
+          <div class="checkout-row">
+            <span>Subtotal</span>
+            <strong id="subtotalValue">฿0</strong>
+          </div>
+          <div class="checkout-row">
+            <span>Delivery</span>
+            <strong>Free</strong>
+          </div>
+          <div class="checkout-row total-row">
+            <span>Total</span>
+            <strong id="totalValue">฿0</strong>
+          </div>
+          <div class="payment-options">
+            <button class="payment-btn active" type="button" data-method="TrueMoney">TrueMoney</button>
+            <button class="payment-btn" type="button" data-method="PromptPay QR">PromptPay QR</button>
+            <button class="payment-btn" type="button" data-method="Bank Transfer">Bank Transfer</button>
+          </div>
+          <p class="payment-note">Selected method: <span id="paymentLabel">TrueMoney</span></p>
+          <button class="checkout-btn" type="button">Proceed to checkout</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
